@@ -1,6 +1,9 @@
-import { Github } from "lucide-react";
-import GA from "../GA";
+"use client";
 
+import { Github } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const GA = dynamic(() => import("../GA"), { ssr: false });
 export default function Footer() {
   return (
     <footer>
